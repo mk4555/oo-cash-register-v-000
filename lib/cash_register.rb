@@ -1,3 +1,4 @@
+require("pry")
 class CashRegister
   attr_accessor :total, :discount
 
@@ -14,6 +15,7 @@ class CashRegister
     discount = @discount / 100
     discount = @total * discount
     @total -= discount
+    
     "After the discount, the total comes to $#{@total}."
   end
 end
