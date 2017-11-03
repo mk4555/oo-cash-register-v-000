@@ -31,6 +31,7 @@ class CashRegister
   end
 
   def void_last_transaction
+    @total -= @items.slice(-1)
     @items.splice(-1,1)
   end
 end
