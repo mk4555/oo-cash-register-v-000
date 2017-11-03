@@ -15,6 +15,7 @@ class CashRegister
     discount = @discount / 100.0
     discount = @total * discount
     @total -= discount
+    @total.to_i
     "After the discount, the total comes to $#{@total}."
   end
 end
