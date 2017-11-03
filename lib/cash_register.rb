@@ -15,7 +15,7 @@ class CashRegister
     discount = @discount / 100
     discount = @total * discount
     @total -= discount
-    
+    binding.pry
     "After the discount, the total comes to $#{@total}."
   end
 end
