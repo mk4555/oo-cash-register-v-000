@@ -16,6 +16,9 @@ class CashRegister
     discount = @total * discount
     @total -= discount
     @total = @total.to_i
-    "After the discount, the total comes to $#{@total}."
+    if @discount !== 0
+      "After the discount, the total comes to $#{@total}."
+    else
+      "There is no discount to apply."
   end
 end
